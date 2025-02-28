@@ -10,3 +10,11 @@ company_employees = {
 
 
 print("Company Employees:", company_employees)
+
+def add_employee(department, name, age, role):
+    if department not in company_employees:
+        company_employees[department] = {}
+    company_employees[department][name] = {"age": age, "role": role}
+
+add_employee("Engineering", "David", 27, "Data Scientist")
+print("Updated Company Employees:", company_employees)

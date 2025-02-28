@@ -18,3 +18,8 @@ def add_employee(department, name, age, role):
 
 add_employee("Engineering", "David", 27, "Data Scientist")
 print("Updated Company Employees:", company_employees)
+
+def count_employees(company):
+    return sum(len(dept) for dept in company.values())
+
+print("Total Employees:", count_employees(company_employees))
